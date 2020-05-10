@@ -20,7 +20,7 @@ public class LoginDAO {//データベースアクセスオブジェクト
 		Class.forName("com.mysql.jdbc.Driver");
 		
 		try(//データベースと接続する　　　Demoはデータベース名
-		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Demo?serverTimezone=UTC", "root", "GReeeeN2!");
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Demo?serverTimezone=UTC", "root", "password");
 		//データベースのuserinfoテーブルからusernameとpasswordを取り出す
 		PreparedStatement preparedStatement = connection.prepareStatement("select * from userinfo where username = ? and password = ?")) {
 			
